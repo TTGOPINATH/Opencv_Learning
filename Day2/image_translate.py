@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 img = cv2.imread('wallpaper.jpg')
-height,width,_ = img.shape[:2]
+height,width = img.shape[:2]
 
 # Define the translation matrix
 tx,ty = width/6, height/6
@@ -11,3 +11,5 @@ trans_img = cv2.warpAffine(img, translation_matrix, (width, height))
 cv2.imshow('Original Image', img)
 cv2.imshow('Translated Image', trans_img)
 cv2.waitKey(0)
+cv2.imwrite('translated_image.jpg', trans_img)
+cv2.destroyAllWindows()
