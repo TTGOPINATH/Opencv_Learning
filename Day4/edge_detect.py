@@ -17,3 +17,10 @@ cv2.destroyAllWindows()
 cv2.imwrite('sobelx.jpg', sobelx)
 cv2.imwrite('sobely.jpg', sobely)
 cv2.imwrite('sobelxy.jpg', sobelxy)
+
+#canny edge detection
+edges = cv2.Canny(img_gaussian, 200, 300)
+cv2.imshow('Canny Edges', edges)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+cv2.imwrite('canny_edges.jpg', edges)
