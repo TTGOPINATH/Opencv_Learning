@@ -35,3 +35,4 @@ im_with_keypoints = cv2.drawKeypoints(im, keypoints, np.array([]), (0,0,255), cv
 cv2.imshow("Keypoints", im_with_keypoints)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+cv2.imwrite('blob.jpg', im_with_keypoints)
