@@ -16,3 +16,4 @@ while True:
         break
 vue.release()
 cv2.destroyAllWindows()
+cv2.imwrite('background_estimation.jpg', fgmask)
