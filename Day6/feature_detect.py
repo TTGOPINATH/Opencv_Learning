@@ -15,5 +15,6 @@ corners = cv2.dilate(corners, None)
 image[corners > 0.01 * corners.max()] = [0, 0, 255]
 cv2.imshow('Original Image', image)
 cv2.imshow('Feature Detection', image_copy)
+cv2.imread('image_corners.jpg', image_copy)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
